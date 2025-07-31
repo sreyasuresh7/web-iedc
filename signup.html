@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Create Account - Ideathon 2025</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: url('robot-2791671_1280.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      position: relative;
+      overflow: hidden;
+    }
+
+    body::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.7);
+      z-index: -1;
+    }
+
+    .signup-box {
+      background: rgba(0, 0, 0, 0.85);
+      padding: 2rem;
+      border-radius: 10px;
+      width: 100%;
+      max-width: 400px;
+      box-shadow: 0 0 20px rgba(0, 255, 200, 0.4);
+      z-index: 1;
+    }
+
+    h2 {
+      text-align: center;
+      color: #00ffc8;
+      margin-bottom: 1.5rem;
+    }
+
+    label {
+      display: block;
+      margin-top: 1rem;
+      margin-bottom: 0.3rem;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"] {
+      width: 100%;
+      padding: 0.6rem;
+      border: none;
+      border-radius: 5px;
+      background: #1a1a1a;
+      color: #fff;
+    }
+
+    input[type="submit"] {
+      margin-top: 1.5rem;
+      width: 100%;
+      padding: 0.7rem;
+      background: #00ffc8;
+      color: #000;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    input[type="submit"]:hover {
+      background: #00c2a8;
+    }
+
+    .login-link {
+      margin-top: 1rem;
+      text-align: center;
+    }
+
+    .login-link a {
+      color: #00ffc8;
+      text-decoration: none;
+    }
+
+    .login-link a:hover {
+      text-decoration: underline;
+    }
+
+    /* Robot animation */
+    .robot {
+      position: fixed;
+      bottom: 0;
+      right: -200px;
+      width: 150px;
+      animation: moveRobot 12s linear infinite;
+      z-index: 0;
+    }
+
+    @keyframes moveRobot {
+      0% { right: -200px; }
+      50% { right: 50%; }
+      100% { right: 110%; }
+    }
+  </style>
+</head>
+<body>
+  <div class="signup-box">
+    <h2>Create Your Account</h2>
+    <form action="submit-signup.php" method="post">
+      <label for="name">Full Name</label>
+      <input type="text" id="name" name="name" placeholder="Your Name" required />
+
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="email" placeholder="you@example.com" required />
+
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" placeholder="Enter a strong password" required />
+
+      <input type="submit" value="Create Account" />
+    </form>
+
+    <div class="login-link">
+      Already have an account?
+      <a href="ideathon.html">Login here</a>
+    </div>
+  </div>
+
+  
+  <img
+    src="3q63.gif"
+    alt="Walking Robot"
+    class="robot"
+  />
+</body>
+</html>
+
+

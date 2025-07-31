@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>IEDC Programs</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #0f0f0f;
+      color: #fff;
+      padding: 2rem;
+      margin: 0;
+    }
+
+    h1 {
+      color: #00ffc8;
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .program-list {
+      display: grid;
+      gap: 1.5rem;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+
+    .program {
+      background: #1a1a1a;
+      padding: 1rem;
+      border-radius: 12px;
+      text-align: center;
+      transition: transform 0.3s ease, background 0.3s ease;
+      box-shadow: 0 0 15px rgba(0, 255, 200, 0.1);
+    }
+
+    .program:hover {
+      transform: scale(1.05);
+      background: #252525;
+    }
+
+    .program img {
+      width: 100%;
+      height: auto;
+      max-height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 10px;
+      transition: opacity 0.3s ease;
+    }
+
+    .program a {
+      display: block;
+      color: #00ffc8;
+      text-decoration: none;
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+
+    /* Responsive paddings for smaller devices */
+    @media (max-width: 600px) {
+      body {
+        padding: 1rem;
+      }
+
+      .program img {
+        max-height: 150px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>IEDC Programs @ Prominence Fest</h1>
+  <div class="program-list">
+
+    <div class="program">
+      <a href="ideathon.html">
+        <img src="1339f50c-f241-4d40-abb7-096097c222d9.jpg" alt="Ideathon">
+        💡 Ideathon 2025
+      </a>
+    </div>
+
+    <div class="program">
+      <a href="ideathon.html">
+        <img src="pexels-thisisengineering-3912979.jpg" alt="Tech Fest">
+        🛠️ Tech Fest
+      </a>
+    </div>
+
+    <div class="program">
+      <a href="foodstall.html">
+        <img src="mix-grill-7414547_1280.jpg" alt="Food Stalls">
+        🍕 Food Stalls
+      </a>
+    </div>
+
+    <div class="program">
+      <a href="games.html">
+        <img src="pexels-element5-1293260.jpg" alt="Games">
+        🎮 Games
+      </a>
+    </div>
+
+    <div class="program">
+      <a href="musicfest.html">
+        <img src="pexels-yabee-1656066.jpg" alt="Music Fest">
+        🎵 Music Fest
+      </a>
+    </div>
+
+  </div>
+</body>
+</html>
+

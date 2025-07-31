@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ideathon @ Prominence Fest</title>
+  <style>
+    /* Base Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: url('pexels-agk42-2599244.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #ffffff;
+      min-height: 100vh;
+      overflow: hidden;
+      position: relative;
+    }
+
+    body::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.7);
+      z-index: -2;
+    }
+
+    .bubble {
+      position: absolute;
+      bottom: -20px;
+      background-color: #00ffc8;
+      border-radius: 50%;
+      opacity: 0.3;
+      animation: rise 10s linear infinite;
+      z-index: -1;
+    }
+
+    @keyframes rise {
+      0% { transform: translateY(0) scale(0.6); opacity: 0.2; }
+      50% { opacity: 0.7; }
+      100% { transform: translateY(-110vh) scale(1.2); opacity: 0; }
+    }
+
+    header {
+      text-align: center;
+      padding: 2rem 1rem;
+      background: rgba(0, 0, 0, 0.6);
+      backdrop-filter: blur(5px);
+    }
+
+    header h1 {
+      font-size: 3rem;
+      color: #00ffc8;
+      margin-bottom: 0.5rem;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      color: #ccc;
+    }
+
+    nav {
+      margin-top: 1rem;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #ffffff;
+      background: #00ffc8;
+      padding: 0.6rem 1.2rem;
+      border-radius: 5px;
+      font-weight: bold;
+      margin: 0 0.5rem;
+      transition: background 0.3s ease;
+    }
+
+    nav a:hover {
+      background: #00c2a8;
+    }
+
+    .content {
+      text-align: center;
+      padding: 3rem 1rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .content h2 {
+      font-size: 2rem;
+      color: #00ffc8;
+      margin-bottom: 1rem;
+    }
+
+    .content ul {
+      list-style: none;
+      padding: 0;
+      font-size: 1.1rem;
+      line-height: 2rem;
+    }
+
+    .content ul li {
+      margin: 0.5rem 0;
+    }
+
+    .cta {
+      margin-top: 2rem;
+      font-size: 1.2rem;
+      color: #fffd9d;
+      font-weight: bold;
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 0.7; }
+      50% { opacity: 1; }
+    }
+
+    @media (max-width: 600px) {
+      header h1 { font-size: 2.2rem; }
+      .content h2 { font-size: 1.5rem; }
+    }
+
+    /* Chatbot Styles */
+    .chatbot {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 300px;
+      background: #1a1a1a;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 0 10px rgba(0, 255, 200, 0.5);
+      display: flex;
+      flex-direction: column;
+      z-index: 1000;
+    }
+
+    .chatbot-header {
+      background: #00ffc8;
+      color: #000;
+      padding: 10px;
+      font-weight: bold;
+    }
+
+    .chatbot-body {
+      flex: 1;
+      padding: 10px;
+      height: 200px;
+      overflow-y: auto;
+      font-size: 0.9rem;
+      color: #ccc;
+    }
+
+    .chatbot-input {
+      display: flex;
+      border-top: 1px solid #333;
+    }
+
+    .chatbot-input input {
+      flex: 1;
+      padding: 8px;
+      border: none;
+      outline: none;
+      background: #111;
+      color: #fff;
+    }
+
+    .chatbot-input button {
+      background: #00ffc8;
+      color: #000;
+      border: none;
+      padding: 8px 12px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Floating Bubbles -->
+  <script>
+    for (let i = 0; i < 40; i++) {
+      const bubble = document.createElement('div');
+      bubble.classList.add('bubble');
+      const size = Math.random() * 10 + 5;
+      bubble.style.width = size + 'px';
+      bubble.style.height = size + 'px';
+      bubble.style.left = Math.random() * 100 + 'vw';
+      bubble.style.animationDuration = (6 + Math.random() * 6) + 's';
+      bubble.style.animationDelay = Math.random() * 5 + 's';
+      document.body.appendChild(bubble);
+    }
+  </script>
+
+  <!-- Header -->
+  <header>
+    <h1>Ideathon 2025</h1>
+    <p>Organized by IEDC RIT - Part of Prominence Tech Fest</p>
+    <nav>
+      <a href="program.html">Register/Login</a>
+      <a href="signup.html">Create Account</a>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <section class="content">
+    <h2>Event Schedule</h2>
+    <ul>
+      <li>📅 August 10: Idea Submission</li>
+      <li>🧠 August 12: Evaluation Round</li>
+      <li>🏆 August 14: Final Presentation</li>
+    </ul>
+    <p class="cta">Bring your best ideas and innovate with us!</p>
+  </section>
+
+  <!-- Chatbot -->
+  <div class="chatbot">
+    <div class="chatbot-header">ChatBot</div>
+    <div class="chatbot-body" id="chatBody">
+      <p><strong>Bot:</strong> Hi! Need help with Ideathon?</p>
+    </div>
+    <div class="chatbot-input">
+      <input type="text" id="chatInput" placeholder="Type a message..." />
+      <button onclick="sendMessage()">Send</button>
+    </div>
+  </div>
+
+  <!-- Chatbot Script -->
+  <script>
+    function sendMessage() {
+      const input = document.getElementById("chatInput");
+      const message = input.value.trim();
+      if (message) {
+        const chatBody = document.getElementById("chatBody");
+        const userMsg = document.createElement("p");
+        userMsg.innerHTML = `<strong>You:</strong> ${message}`;
+        chatBody.appendChild(userMsg);
+
+        const botReply = document.createElement("p");
+        botReply.innerHTML = `<strong>Bot:</strong> ${
+          message.toLowerCase().includes("register")
+            ? "You can register using the 'Register/Login' button above!"
+            : "I'll get back to you on that!"
+        }`;
+        chatBody.appendChild(botReply);
+
+        chatBody.scrollTop = chatBody.scrollHeight;
+        input.value = "";
+      }
+    }
+  </script>
+
+</body>
+</html>
+
+
+
+
+
